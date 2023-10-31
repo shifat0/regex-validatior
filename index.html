@@ -8,10 +8,46 @@
             integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Regex Validator</title>
+        <style>
+            #email,
+            #p-number,
+            #post-code {
+                visibility: hidden;
+            }
+
+            #email-success,
+            #pn-success,
+            #pc-success {
+                color: green
+            }
+        </style>
     </head>
 
     <body class="container">
-        <h1>Regular Expression Validator</h1>
+        <h3>Regular Expression Validator</h3>
+        <h6>Please select an option below you want to validate</h6>
+        <select id="select">
+            <option>Select an option</option>
+            <option>Email</option>
+            <option>Phone Number</option>
+            <option>Post Code</option>
+        </select>
+        <form id="form">
+            <label for="email" id="e-label">Email</label>
+            <input type="text" id="email" autocomplete="email">
+            <span id="email-success"></span>
+
+            <label for="p-number" id="pn-label">Phone Number</label>
+            <input type="text" id="p-number" />
+            <span id="pn-success"></span>
+
+            <label for="post-code" id="pc-label">Post Code</label>
+            <input type="text" id="post-code">
+            <span id="pc-success"></span>
+            <br>
+            <input class="button-primary" id="submit-btn" type="submit" value="Validate">
+        </form>
+
         <script src="script/script.js"></script>
     </body>
 
